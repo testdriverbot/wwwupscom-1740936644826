@@ -1,0 +1,9 @@
+version: 4.2.12
+session: 67c64f3dd5fafe51e5a432c5
+steps:
+  - prompt: Navigate to the Quote section.
+    commands:
+      - command: hover-text
+        text: Quote
+        description: quote section in the navigation bar
+        action: click
