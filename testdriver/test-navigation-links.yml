@@ -1,0 +1,17 @@
+version: 4.2.12
+session: 67c497cd308847454e5fb941
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Click the "Shipping" link in the navigation menu.
+    commands:
+      - command: hover-text
+        text: Ship
+        description: shipping link in the navigation menu
+        action: click
+  - prompt: >-
+      Assert that the Shipping page is displayed.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the Shipping page is displayed with "Create a Shipment"

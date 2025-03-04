@@ -1,0 +1,17 @@
+version: 4.2.12
+session: 67c497c8308847454e5fb93f
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Click "Allow while visiting the site" for location permissions.
+    commands:
+      - command: hover-text
+        text: Allow while visiting the site
+        description: location permission option in the popup
+        action: click
+  - prompt: >-
+      Assert that the location permission dialog closes.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the location permission dialog is not visible
