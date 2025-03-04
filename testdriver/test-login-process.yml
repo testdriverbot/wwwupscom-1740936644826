@@ -1,0 +1,28 @@
+version: 4.2.12
+session: 67c64f3dfbb39e33c0f1ac9d
+steps:
+  - prompt: Click on the "Log In" button.
+    commands:
+      - command: hover-text
+        text: Log In
+        description: login button in the top right of the header
+        action: click
+  - prompt: Enter valid login credentials.
+    commands:
+      - command: hover-text
+        text: Email or Username
+        description: email or username input field
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: SecurePassword123
+  - prompt: Submit the login form.
+    commands:
+      - command: hover-text
+        text: Continue
+        description: continue button below the password field
+        action: click
