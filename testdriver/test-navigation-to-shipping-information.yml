@@ -1,0 +1,25 @@
+version: 4.2.12
+session: 67c64f3dd5fafe51e5a432c3
+steps:
+  - prompt: Click on the "Shipping" link in the header.
+    commands:
+      - command: hover-text
+        text: Ship
+        description: shipping link in the header
+        action: click
+  - prompt: Assert that the user is directed to the shipping information page.
+    commands:
+      - command: assert
+        expect: the user is on the shipping information page
+  - prompt: >-
+      Verify that shipping options and details are displayed correctly.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: shipping options and details are displayed correctly
+  - prompt: >-
+      Verify that shipping options and details are displayed correctly.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: shipping options and details are displayed correctly
