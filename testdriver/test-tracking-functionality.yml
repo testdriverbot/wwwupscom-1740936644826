@@ -1,0 +1,17 @@
+version: 4.2.12
+session: 67c64f3efbb39e33c0f1ac9f
+steps:
+  - prompt: Enter a valid tracking number in the tracking input field.
+    commands:
+      - command: hover-text
+        text: Tracking Number or InfoNotice®
+        description: tracking input field
+        action: click
+      - command: type
+        text: 1Z999AA10123456784
+  - prompt: Click the "Track" button.
+    commands:
+      - command: hover-text
+        text: Track
+        description: track button next to the tracking input field
+        action: click
