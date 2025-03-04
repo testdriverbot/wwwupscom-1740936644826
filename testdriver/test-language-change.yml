@@ -1,0 +1,21 @@
+version: 4.2.12
+session: 67c64f3fd5fafe51e5a432c7
+steps:
+  - prompt: Click on the language selection dropdown.
+    commands:
+      - command: hover-text
+        text: United States - English
+        description: language selection dropdown in the header
+        action: click
+  - prompt: Select a different language.
+    commands:
+      - command: hover-text
+        text: Estados Unidos - Español
+        description: Spanish language option in the dropdown
+        action: click
+  - prompt: >-
+      Assert that the website content changes to the selected language.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the website content is in Spanish
