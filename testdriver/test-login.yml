@@ -1,0 +1,30 @@
+version: 4.2.12
+session: 67c497d157ae1381f144465b
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Click the "Log In" button in the top right corner.
+    commands:
+      - command: hover-text
+        text: Log In
+        description: log in button in the top right corner
+        action: click
+  - prompt: Enter valid credentials on the login form.
+    commands:
+      - command: hover-text
+        text: Email or Username
+        description: email or username input field
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: SecurePassword123
+  - prompt: Click the "Sign In" button.
+    commands:
+      - command: hover-text
+        text: Continue
+        description: continue button on the login form
+        action: click
